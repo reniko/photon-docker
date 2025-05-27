@@ -10,6 +10,7 @@ RUN apt-get update \
 WORKDIR /photon
 ADD https://github.com/komoot/photon/releases/download/0.6.2/photon-0.6.2.jar /photon/photon.jar
 ADD https://raw.githubusercontent.com/reniko/photon-docker/refs/heads/master/entrypoint.sh ./entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 VOLUME /photon/photon_data
 EXPOSE 2322
